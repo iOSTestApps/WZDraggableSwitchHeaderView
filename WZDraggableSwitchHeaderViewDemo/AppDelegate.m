@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WZTransitionTableController.h"
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [BuddyBuildSDK setup];
+    
     WZTransitionTableController *controller = [[WZTransitionTableController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
